@@ -1,0 +1,207 @@
+/* CinemasComponent's private CSS styles */
+label {
+  color: #435960;
+  font-weight: bold;
+}
+input {
+  font-size: 1em;
+  padding: .5rem;
+}
+button {
+  margin-top: 20px;
+  margin-right: .5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+.movie-name-container {
+  background: #ffbf00;;
+  height: 100px;
+  padding: 40px 30px 10px;
+}
+
+.movie-name {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.movie-detail {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.movie-detail-label {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.list {
+  zoom: 1;
+    border-bottom: 1px solid #eff1f3;
+    padding: 13px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.listing-info {
+  width: 28%;
+  min-width: 250px;
+  font-size: 10px;
+  color: #999;
+}
+
+.details {
+  float: left;
+  margin-top: 5px;
+  padding-left: 5px;
+  display: table;
+  width: 100%;
+}
+
+.details-name {
+  display: table-cell;
+    vertical-align: top;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.details-title {
+  display: flex;
+}
+
+.cinema-name {
+  width: 220px;
+  font-weight: 700;
+  color: #333;
+  float: left;
+  font-size: 18px;
+}
+
+.showtimes-details-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.showtime-pill-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.showtime-pill-container {
+  margin: 8px;
+}
+
+.showtime-pill {
+  border: 1px solid #999;
+    color: #4abd5d;
+    padding: 4px;
+    border-radius: 4px;
+    width: 96px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.showtime-pill-details {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2px;
+    height: 14px;
+}
+
+.detail-text {
+  margin: 0 auto;
+}
+
+.venue-flags {
+  margin-bottom: 0;
+  padding: 8px 0 0;
+  margin-left: 8px;
+}
+
+.gold-icon {
+  width: 7px;
+    height: 7px;
+    background: #ffc610;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.venue-flags-details {
+  vertical-align: middle;
+    margin: 0 8px;
+    color: #6c6c6c;
+}
+
+.unpaid-mticket-wrapper {
+  margin-top: 10px;
+    float: left;
+    width: 100%;
+}
+
+.mticket-info {
+  color: #49ba8e;
+  cursor: default;
+}
+
+.attributes-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  cursor: default;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.legends-container {
+  display: flex;
+}
+
+.showtimes-legend {
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.legend-icon {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #4abd5d;
+  margin-right: 8px;
+}
+
+.fast-filling {
+  background-color: #f60;
+}
+
+.legend-text {
+  color: #717171;
+  text-transform: uppercase;
+  font-size: 10px;
+}

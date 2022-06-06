@@ -1,0 +1,84 @@
+<div class="booking-container"  *ngIf="cinema">
+    <div>
+        <!-- ={{selectedSeats | json}}= -->
+        <div class="seat-container">
+            <div>
+                <button type="button" class="back-button" (click)="goBack()">go back</button>
+            </div>
+            <div class="seats">
+                <div class="seats-block">
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="seatP">GOLD-Rs. 200.00</div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr *ngFor="let seat of multi; let outer = index">
+                                    <td>
+                                        <div [innerHTML]="char[outer] | uppercase" class="seatR"></div>
+                                    </td>
+                                    <td *ngFor="let column of multi[outer]; let inner = index">
+                                        <div class="seatI">
+                                            <span class="seat-number"
+                                            [ngStyle]="{'display':column['booked']? 'none': 'block' }"
+                                            [innerHTML]="inner + 1"></span>
+                                            <a class="seat-layout"
+                                            [ngStyle]="{'background-color':column['booked']? 'grey':column['selected']? 'green': '' }">
+                                                <input type="checkbox" class="seat-checkbox"
+                                                    (change)="getSelectedTickets()"
+                                                    [disabled] = "multi[outer][inner]['booked']"
+                                                    [(ngModel)] = "multi[outer][inner]['selected']"
+                                                    [ngModelOptions] = "{standalone: true}"
+                                                    />
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seat-action-container">
+            <a class="payment-container">
+                <input type="button" class="payment-button" value="Pay Amount" (click)="payAmount(cinema)"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div *ngIf="cinema">
+    <div>
+
+
+        <table>
+            <tr *ngFor="let seat of multi; let outer = index">
+                <td>
+                    <span [innerHTML]="char[outer] | uppercase" class="row-number"></span>
+                </td>
+                <td *ngFor="let column of multi[outer]; let inner = index" class="seat-column">
+                    <span class="cinema-seat" 
+                        [ngStyle]="{'background-color':column['booked']? 'grey':column['selected']? 'green': '' }"
+                        >
+                        <span [innerHTML]="inner + 1"></span>
+                        <input type="checkbox"
+                            (change)="getSelectedTickets()"
+                            [disabled] = "multi[outer][inner]['booked']"
+                            [(ngModel)] = "multi[outer][inner]['selected']"
+                            [ngModelOptions] = "{standalone: true}"
+                            />
+                    </span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div>
+        <input type="button" value="Pay" (click)="payAmount(cinema)"/>
+    </div>
+</div> -->

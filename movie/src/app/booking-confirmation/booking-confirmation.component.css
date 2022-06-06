@@ -1,0 +1,64 @@
+.booking-confirm-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.booking-summary {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #c02c39;
+}
+
+.booking-details-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.left-container {
+    width: 30%;
+}
+
+.right-container {
+    width: 70%;
+}
+
+.movie-poster {
+    width: -webkit-fill-available;
+    height: 450px;
+    margin-left: 10px;
+}
+
+.information-container {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 150px;
+    font-size: 18px;
+}
+
+.confirm-label {
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    padding: 5px 10px;
+    width: 150px;
+}
+
+.success-container {
+    display: flex;
+    margin: 60px 0px 0px 120px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    font-style: italic;
+}
+
+.value-label {
+    font-weight: bold;
+}

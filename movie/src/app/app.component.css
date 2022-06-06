@@ -1,0 +1,30 @@
+/* AppComponent's private CSS styles */
+.title-container {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  padding: 30px 0px 30px 30px;
+  background: #333545;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.navigation-container {
+  background: #1f253a;
+  padding: 0px 30px 10px;
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+nav a.active {
+  background-color: black;
+}

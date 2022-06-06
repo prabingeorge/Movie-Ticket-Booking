@@ -1,0 +1,15 @@
+<div class="movie-dashboard">
+  <div class="movies-menu">
+    <a *ngFor="let movie of movies"
+        routerLink="/detail/{{movie.id}}">
+        <div>
+          <img [src]="movie.image" [alt]="movie.name" class="movie-poster" />
+        </div>
+        <div>
+          <span [innerHtml]="movie.name"></span>
+        </div>
+      </a>
+  </div>
+</div>
+
+<app-movie-search></app-movie-search>

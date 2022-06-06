@@ -1,0 +1,58 @@
+<div>
+    <div class="booking-confirm-container">
+        <span class="booking-summary">Booking Confirmation</span>
+    </div>
+    <div class="booking-details-container">
+        <div class="left-container">
+            <img [src]="bookdingDetails.movieImage" [alt]="bookdingDetails.movieName" class="movie-poster" />
+        </div>
+        <div class="right-container">
+            <table class="information-container">
+                <tr>
+                    <td>
+                        <span class="confirm-label">Movie:</span>
+                    </td>
+                    <td>
+                        <span [innerHTML]="bookdingDetails.movieName"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="confirm-label">Cinema:</span>
+                    </td>
+                    <td>
+                        <span [innerHTML]="bookdingDetails.cinema"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="confirm-label">Ticket(s):</span>
+                    </td>
+                    <td>
+                        <span [innerHTML]="bookdingDetails.seats"></span>
+                        <span class="value-label" [innerHTML]="'   ('+ bookdingDetails.seats?.length +' Ticket(s))'"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="confirm-label">Show Time:</span>
+                    </td>
+                    <td>
+                        <span [innerHTML]="bookdingDetails.time"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="confirm-label">Amount:</span>
+                    </td>
+                    <td>
+                        <span [innerHTML]="'Rs. ' + bookdingDetails.amount"></span>
+                    </td>
+                </tr>
+            </table>
+            <div class="success-container">
+                <span>Thanks for booking! Have a cheerful day!</span>
+            </div>
+        </div>
+    </div>
+</div>

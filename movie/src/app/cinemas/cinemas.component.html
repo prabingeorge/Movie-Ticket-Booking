@@ -1,0 +1,64 @@
+<div *ngIf="movie">
+  <div class="movie-name-container">
+    <div>
+      <span class="movie-name" [innerHTML]="movie.name | uppercase"></span>
+    </div>
+    <div class="movie-detail">
+        <span class="movie-detail-label">DIRECTOR: </span>
+        <span [innerHTML]="movie.director"></span>
+    </div>
+    <div class="movie-detail">
+      <span class="movie-detail-label">CAST & CREW: </span>
+      <span *ngFor="let cast of movie.castAndCrew" [innerHTML]="cast + ', '"></span>
+    </div>
+  </div>
+  <div>
+    <div class="attributes-container">
+      <div></div>
+      <div class="legends-container">
+        <div class="showtimes-legend">
+          <div class="legend-icon"></div>
+          <div class="legend-text">Available</div>
+        </div>
+        <div class="showtimes-legend">
+          <div class="legend-icon fast-filling"></div>
+          <div class="legend-text">Fast Filling</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li class="list" *ngFor="let cinema of cinemasList">
+        <div class="listing-info">
+          <div class="details">
+            <div class="details-name">
+              <div class="details-title">
+                <a class="cinema-name" [innerHTML]="cinema.cinemaName"></a>
+              </div>
+              <div class="unpaid-mticket-wrapper">
+                <div>
+                  <label class="mticket-info">M-Ticket</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-details-container">
+          <div class="showtime-pill-wrapper">
+            <div class="showtime-pill-container" *ngFor="let showTime of cinema.showTimes">
+              <a class="showtime-pill" (click)="bookMovieTickets(cinema.cinemaId, cinema.cinemaName, showTime)">
+                <div class="showtime-pill-details">
+                  <div class="detail-text" [innerHTML]="showTime"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="venue-flags">
+            <span class="gold-icon"></span>
+            <span class="venue-flags-details">Cancellation Available</span>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</div>
